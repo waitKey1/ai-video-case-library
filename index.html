@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 营销视频 · 可交付 Case 库</title>
+<style>
+  :root{
+    --ink:#1A1F2B; --ink2:#3A4150; --gray:#6B7280; --gray2:#9AA0AC;
+    --paper:#FBFAF7; --line:#E7E2D6; --white:#fff;
+    --green:#2E7D5B; --blue:#2F6F9F; --rose:#C42A55; --amber:#C77B2B; --purple:#6B4F9E;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Segoe UI",system-ui,sans-serif;
+    font-size:15px; line-height:1.75; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{display:flex; max-width:1560px; margin:0 auto;}
+  /* ---------- sidebar ---------- */
+  aside{
+    width:264px; flex:0 0 264px; position:sticky; top:0; height:100vh;
+    padding:34px 22px; border-right:1px solid var(--line); background:var(--white);
+    overflow-y:auto;
+  }
+  aside .brand{font-size:13px; font-weight:700; color:var(--gray); letter-spacing:.12em; margin-bottom:6px}
+  aside h2{font-size:17px; margin:0 0 22px; line-height:1.4}
+  aside nav a{
+    display:block; padding:7px 10px; margin:1px 0; border-radius:6px;
+    color:var(--ink2); text-decoration:none; font-size:13.5px;
+    border-left:2px solid transparent; transition:.15s;
+  }
+  aside nav a:hover{background:#F5F2EC; color:var(--ink)}
+  aside nav a.on{background:#F2EFE8; border-left-color:var(--ink); font-weight:600}
+  aside nav .grp{font-size:11px; color:var(--gray2); letter-spacing:.1em; margin:18px 0 6px 10px; font-weight:700}
+  /* ---------- main ---------- */
+  main{flex:1; min-width:0; padding:52px 60px 100px}
+  header.hero{margin-bottom:56px}
+  header.hero .kicker{font-size:12.5px; letter-spacing:.16em; color:var(--gray); font-weight:700; margin-bottom:14px}
+  header.hero h1{font-size:42px; line-height:1.25; margin:0 0 18px; letter-spacing:-.01em}
+  header.hero p.lead{font-size:17px; color:var(--ink2); max-width:780px; margin:0 0 10px}
+  header.hero .meta{margin-top:24px; font-size:13px; color:var(--gray2)}
+  hr.sep{border:0; border-top:1px solid var(--line); margin:60px 0}
+
+  h2.sec{font-size:26px; margin:0 0 8px; letter-spacing:-.01em}
+  h2.sec .num{color:var(--gray2); font-weight:400; margin-right:10px}
+  p.secdesc{color:var(--gray); margin:0 0 30px; font-size:14.5px; max-width:820px}
+
+  /* ---------- callout ---------- */
+  .rule{
+    background:var(--white); border:1px solid var(--line); border-left:4px solid var(--ink);
+    border-radius:10px; padding:24px 28px; margin:0 0 34px;
+  }
+  .rule .t{font-size:12px; letter-spacing:.14em; color:var(--gray); font-weight:700; margin-bottom:10px}
+  .rule .q{font-size:19px; line-height:1.65; font-weight:600; margin:0}
+  .rule .s{margin-top:12px; color:var(--gray); font-size:14px; margin-bottom:0}
+
+  /* ---------- tables ---------- */
+  table{width:100%; border-collapse:collapse; background:var(--white);
+        border:1px solid var(--line); border-radius:10px; overflow:hidden; font-size:14px}
+  th{text-align:left; padding:13px 16px; background:#F6F3EC; font-size:12.5px;
+     letter-spacing:.06em; color:var(--gray); font-weight:700; border-bottom:1px solid var(--line)}
+  td{padding:13px 16px; border-bottom:1px solid #F0ECE3; vertical-align:top}
+  tr:last-child td{border-bottom:0}
+  td strong{font-weight:600}
+  .tag{display:inline-block; padding:2px 9px; border-radius:20px; font-size:11.5px; font-weight:700; white-space:nowrap}
+  .tag.hi{background:#FBE7EC; color:#A81F47}
+  .tag.mid{background:#FFF3DF; color:#8A5A0F}
+  .tag.lo{background:#E6F4EC; color:#1F6B45}
+  .tag.det{background:#EAF1F8; color:#22506F}
+
+  /* ---------- case cards ---------- */
+  .case{
+    background:var(--white); border:1px solid var(--line); border-radius:14px;
+    margin:0 0 26px; overflow:hidden;
+  }
+  .case .top{padding:26px 30px 22px; border-bottom:1px solid #F0ECE3}
+  .case .hdr{display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:12px}
+  .case .no{
+    width:34px; height:34px; border-radius:9px; display:grid; place-items:center;
+    color:#fff; font-weight:700; font-size:15px; flex:0 0 34px;
+  }
+  .case h3{font-size:21px; margin:0; letter-spacing:-.01em}
+  .case .sub{color:var(--gray); font-size:14px; margin:0}
+  .case .body{padding:24px 30px 28px}
+  .case .grid{display:grid; grid-template-columns:1fr 1fr; gap:26px}
+  @media(max-width:1180px){ .case .grid{grid-template-columns:1fr} }
+
+  .ex{
+    background:#FAF8F3; border:1px dashed #DED7C8; border-radius:10px;
+    padding:18px 20px; margin:0 0 20px;
+  }
+  .ex .lbl{font-size:11px; letter-spacing:.14em; color:var(--gray2); font-weight:700; margin-bottom:8px}
+  .ex .pn{font-size:16.5px; font-weight:700; margin:0 0 6px}
+  .ex .pd{color:var(--ink2); font-size:13.8px; margin:0}
+  .ex .pd b{font-weight:600}
+
+  .io{display:flex; gap:10px; align-items:stretch; margin:0 0 20px; flex-wrap:wrap}
+  .io .box{flex:1; min-width:130px; background:#F7F5EF; border-radius:8px; padding:11px 14px}
+  .io .box .k{font-size:11px; color:var(--gray2); font-weight:700; letter-spacing:.1em}
+  .io .box .v{font-size:13.5px; margin-top:3px}
+  .io .ar{display:grid; place-items:center; color:var(--gray2); font-size:17px; padding:0 2px}
+
+  h4.lbl{font-size:12px; letter-spacing:.14em; color:var(--gray); font-weight:700; margin:0 0 12px}
+  ul.chk{list-style:none; margin:0; padding:0}
+  ul.chk li{position:relative; padding-left:26px; margin:0 0 10px; font-size:13.8px; color:var(--ink2)}
+  ul.chk li::before{
+    content:""; position:absolute; left:0; top:5px; width:15px; height:15px;
+    border:1.5px solid #C9C2B2; border-radius:4px;
+  }
+  ul.chk li b{color:var(--ink); font-weight:600}
+  ul.chk li .th{color:var(--red,#A81F47); font-weight:600}
+
+  .why{background:#F3F7F4; border-left:3px solid var(--green); border-radius:0 8px 8px 0; padding:14px 18px; margin:16px 0 0}
+  .why .k{font-size:11px; letter-spacing:.14em; color:var(--green); font-weight:700; margin-bottom:6px}
+  .why p{margin:0; font-size:13.8px; color:#2A4A3A}
+  .edge{background:#FFF8ED; border-left:3px solid var(--amber); border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0 0}
+  .edge .k{font-size:11px; letter-spacing:.14em; color:#8A5A0F; font-weight:700; margin-bottom:6px}
+  .edge p{margin:0; font-size:13.8px; color:#6B4E1E}
+
+  /* ---------- breakthrough ---------- */
+  .bks{display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
+  @media(max-width:1080px){ .bks{grid-template-columns:1fr} }
+  .bk{background:var(--white); border:1px solid var(--line); border-radius:12px; padding:22px 24px}
+  .bk .n{font-size:12px; font-weight:700; color:var(--gray2); letter-spacing:.12em; margin-bottom:8px}
+  .bk h4{margin:0 0 8px; font-size:16.5px}
+  .bk p{margin:0; font-size:13.8px; color:var(--ink2)}
+
+  footer{margin-top:70px; padding-top:26px; border-top:1px solid var(--line); color:var(--gray2); font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<aside>
+  <div class="brand">CASE LIBRARY</div>
+  <h2>AI 营销视频<br>可交付 Case 库</h2>
+  <nav>
+    <div class="grp">总则</div>
+    <a href="#rule">判定铁律</a>
+    <a href="#layers">成功的四个层次</a>
+    <a href="#gates">四道验收门</a>
+    <div class="grp">八个 Case</div>
+    <a href="#c1">1 · 商品图转展示视频</a>
+    <a href="#c2">2 · 口播短视频批量</a>
+    <a href="#c3">3 · 爆款结构克隆</a>
+    <a href="#c4">4 · 一稿多语言</a>
+    <a href="#c5">5 · 数据动效片</a>
+    <a href="#c6">6 · 产品功能演示</a>
+    <a href="#c7">7 · 长内容切片</a>
+    <a href="#c8">8 · 广告变体工厂</a>
+    <div class="grp">落地</div>
+    <a href="#priority">投产顺序</a>
+    <a href="#breakthrough">突破点</a>
+  </nav>
+</aside>
+
+<main>
+
+<header class="hero">
+  <div class="kicker">AI MARKETING VIDEO · DELIVERY CASES</div>
+  <h1>什么样的 Case<br>才算「做完了」</h1>
+  <p class="lead">大部分 AI 视频项目失败，不是因为生成质量不够，而是因为完成条件写成了形容词。本文把「成功」拆成可判定的谓词，并给出八个能跑到验收的 Case。</p>
+  <p class="lead" style="color:var(--gray);font-size:15px">每个 Case 配一个具体的示例产品、输入产出、带阈值的验收清单，以及它的能力边界。</p>
+  <div class="meta">整理于 2026-10-31　·　判据来自五个开源框架的工程实践与自有平台经验　·　不含外部引用数据</div>
+</header>
+
+<!-- ================= RULE ================= -->
+<section id="rule">
+  <div class="rule">
+    <div class="t">判定铁律</div>
+    <p class="q">一个 Case 能不能跑通，取决于它的完成条件是不是一个谓词 —— 能算出 true / false，而不是一个形容词。</p>
+    <p class="s">「画面有质感」「调性对」永远判不了，所以这类 Case 做不完。「产品外观相似度 ≥ 0.92」「音画误差 ≤ 3 帧」「字幕 OCR 回读一致率 ≥ 98%」能判，所以这类 Case 一定能收尾。<br><b>选 Case 的第一原则：先把验收写成脚本，再决定做不做。</b></p>
+  </div>
+</section>
+
+<!-- ================= LAYERS ================= -->
+<section id="layers">
+  <h2 class="sec"><span class="num">01</span>成功的四个层次</h2>
+  <p class="secdesc">大部分框架失败，是因为把这四层混成了一层。前两层全过了，仍然可能是一条漂亮的垃圾。</p>
+
+  <table>
+    <thead>
+      <tr><th style="width:16%">层次</th><th style="width:30%">定义的问题</th><th style="width:20%">谁能判</th><th style="width:34%">现状</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>技术成功</strong></td><td>文件存在、能播、参数正确</td><td>机器</td><td>100% 可自动</td></tr>
+      <tr><td><strong>感知成功</strong></td><td>人看着不别扭</td><td>机器抽检 + 人</td><td>大部分可自动</td></tr>
+      <tr><td><strong>品牌成功</strong></td><td>产品对、宣称对、不违规</td><td>规则 + 人审</td><td>半自动</td></tr>
+      <tr><td><strong>商业成功</strong></td><td>投放跑得动</td><td>只有广告平台知道</td><td><strong style="color:#A81F47">框架测不了</strong></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ================= GATES ================= -->
+<section id="gates">
+  <h2 class="sec"><span class="num">02</span>四道验收门</h2>
+  <p class="secdesc">流水线形态：逐层过滤，前一门不过不进下一门。这四道门构成所有 Case 的公共底座。</p>
+
+  <table>
+    <thead>
+      <tr><th style="width:14%">门</th><th style="width:30%">检查内容</th><th style="width:26%">判据示例</th><th style="width:30%">不过怎么办</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>技术门</strong><br><span class="tag lo">全自动</span></td>
+        <td>ffprobe 可读 · 时长 · 画幅帧率 · 音轨 · 黑帧 · 时间戳单调</td>
+        <td>时长误差 ≤ ±0.5s；非静音片必须有有效音轨；无连续黑帧</td>
+        <td>直接重渲，不进入后续评审</td>
+      </tr>
+      <tr>
+        <td><strong>感知门</strong><br><span class="tag mid">自动打分</span></td>
+        <td>文字可读 · 运动充分度 · 音画同步 · 主体一致性</td>
+        <td>字幕有效字高 ≥5% 帧高；音画误差 ≤3 帧；DINO 相似度 ≥0.9</td>
+        <td>退回对应阶段重做，记录失败原因</td>
+      </tr>
+      <tr>
+        <td><strong>品牌门</strong><br><span class="tag mid">规则 + 人</span></td>
+        <td>产品外观与实拍一致 · 卖点可追溯 · 无幻觉文字 · 无竞品露出</td>
+        <td>产品特征点逐项核对；每个卖点能指回 brief 的哪一条</td>
+        <td>改源文件（brief / 提示词 / 素材），不在成片上打补丁</td>
+      </tr>
+      <tr>
+        <td><strong>商业门</strong><br><span class="tag hi">框架外</span></td>
+        <td>3 秒完播 · 完播率 · CTR · CVR · ROAS</td>
+        <td>与客户基线对比，胜出即通过</td>
+        <td>数据回流，更新品类先验</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="rule" style="margin-top:26px;border-left-color:var(--blue)">
+    <div class="t" style="color:var(--blue)">关键认知</div>
+    <p class="q" style="font-size:17px">单条成功是概率，<b>变体库的成功率才是判据。</b></p>
+    <p class="s">同样的提示词跑十次出两三张能用的，这是常态。所以框架的 KPI 不该是「这条片好不好」，而是「在 N 条变体里，能否稳定产出 M 条超过客户基线的」。<br>这恰好是 AI 相对传统制作唯一压倒性的优势：变体成本近乎为零。</p>
+  </div>
+</section>
+
+<hr class="sep">
+
+<!-- ================= CASES ================= -->
+<section id="cases">
+  <h2 class="sec"><span class="num">03</span>八个能跑通的 Case</h2>
+  <p class="secdesc">按「完成条件的可判定程度」组织。每个 Case 都配了示例产品与具体验收阈值，可以直接照着写脚本。</p>
+
+  <!-- ---- CASE 1 ---- -->
+  <article class="case" id="c1">
+    <div class="top">
+      <div class="hdr">
+        <div class="no" style="background:var(--green)">1</div>
+        <h3>商品图转展示视频</h3>
+        <span class="tag lo">难度 低</span>
+        <span class="tag mid">半确定性</span>
+      </div>
+      <p class="sub">用几张实拍商品图，生成一段有运镜、有卖点字卡的竖版展示片。不涉及人物、不涉及生成文字。</p>
+    </div>
+    <div class="body">
+      <div class="ex">
+        <div class="lbl">示例产品</div>
+        <p class="pn">「雾屿 Aroma One」桌面香薰机</p>
+        <p class="pd">一个做小家电的新消费品牌，SKU 有六种配色（雾白 / 砂陶 / 墨绿 / 雾蓝 / 奶杏 / 曜黑）。电商详情页已有 6 张棚拍图（正面、45 度、俯视、出水口特写、场景图、尺寸图）。<br><b>要做的片子</b>：3 条 15 秒竖版，只做三个主推配色（雾白 / 砂陶 / 墨绿）。每条从特写推近开始，展示雾化瞬间，切到场景图，最后落定品牌字标与「静音 28dB」卖点。</p>
+      </div>
+
+      <div class="io">
+        <div class="box"><div class="k">输入</div><div class="v">1–5 张商品图 + 卖点文案</div></div>
+        <div class="ar">→</div>
+        <div class="box"><div class="k">产出</div><div class="v">8–15 秒竖版展示片</div></div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <h4 class="lbl">完成判据</h4>
+          <ul class="chk">
+            <li>主体与输入图 <b>相似度 ≥ 0.90</b>（DINO/CLIP，每 30 帧抽检）</li>
+            <li>画面内 <b>无生成文字</b>（OCR 检出字符数 = 0，字卡单独图层渲染）</li>
+            <li>时长误差 <b>≤ ±0.3s</b>，画幅符合订单</li>
+            <li>每段运动的光流均值 <b>&gt; 阈值</b>（排除静图缓推）</li>
+            <li>三个配色各生成一条，色差 ΔE <b>≤ 3</b></li>          </ul>
+        </div>
+        <div>
+          <div class="why">
+            <div class="k">为什么能跑通</div>
+            <p>全是单主体、无人物交互、无文字。生成模型的不确定性被限制在「外观微变」这一个维度，而这个维度有相似度指标兜底。所有判据都能写成脚本。</p>
+          </div>
+          <div class="edge">
+            <div class="k">边界</div>
+            <p>产品有透明材质、反光面、或需要展示内部结构时会崩。多件产品同框时主体归属容易错。超过 20 秒后镜头重复感明显。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ---- CASE 2 ---- -->
+  <article class="case" id="c2">
+    <div class="top">
+      <div class="hdr">
+        <div class="no" style="background:var(--blue)">2</div>
+        <h3>口播短视频批量生成</h3>
+        <span class="tag lo">难度 低–中</span>
+        <span class="tag det">近确定性</span>
+      </div>
+      <p class="sub">给一段稿子和一个音色，产出配好音、上好词级字幕的竖版口播片。字幕时间戳从 TTS 直接拿，不做事后对齐。</p>
+    </div>
+    <div class="body">
+      <div class="ex">
+        <div class="lbl">示例产品</div>
+        <p class="pn">「柔朵」婴儿纸尿裤</p>
+        <p class="pd">母婴品牌，主打「夜用 12 小时不红臀」。目标人群是 0–1 岁宝宝的妈妈，投放渠道以抖音和小红书为主。<br><b>要做的片子</b>：4 条 45 秒素人口播，讲「半夜换尿布把全家吵醒」的痛点，落到产品卖点。同一稿子 × 2 个音色 × 2 种开头钩子交叉。</p>
+      </div>
+
+      <div class="io">
+        <div class="box"><div class="k">输入</div><div class="v">口播稿 + 音色</div></div>
+        <div class="ar">→</div>
+        <div class="box"><div class="k">产出</div><div class="v">30–60 秒竖版口播片</div></div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <h4 class="lbl">完成判据</h4>
+          <ul class="chk">
+            <li>字幕时间戳来自 TTS 词边界，音画峰值互相关误差 <b>≤ 3 帧</b></li>
+            <li>字幕有效字高 <b>≥ 5% 帧高</b>（1080p 下 ≥56px），按渲染帧实测而非字号设置</li>
+            <li>无 RMS 低于门限超过 <b>1 秒</b>的静音段</li>
+            <li>稿件里的产品名与数字，<b>100%</b> 出现在字幕中</li>
+            <li>同一稿换音色后，时长漂移 <b>≤ 8%</b></li>
+          </ul>
+        </div>
+        <div>
+          <div class="why">
+            <div class="k">为什么能跑通</div>
+            <p>MoneyPrinterTurbo 已经证明这条链：<b>字幕时间戳从 TTS 直接拿，音字同源，根本不需要对齐算法</b>。整条流程没有概率性环节，每个指标都能在渲染产物上量出来。</p>
+          </div>
+          <div class="edge">
+            <div class="k">边界</div>
+            <p>需要真实人物出镜时，人物一致性会成为新问题。稿子超过 90 秒后节奏容易平。中文多音字需要人工校对表。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ---- CASE 3 ---- -->
+  <article class="case" id="c3">
+    <div class="top">
+      <div class="hdr">
+        <div class="no" style="background:var(--rose)">3</div>
+        <h3>爆款结构克隆</h3>
+        <span class="tag mid">难度 中</span>
+        <span class="tag mid">半确定性</span>
+      </div>
+      <p class="sub">给一条跑量的参考片，保留它的节奏结构与钩子类型，换掉内容重新生成。不是换皮，是换骨。</p>
+    </div>
+    <div class="body">
+      <div class="ex">
+        <div class="lbl">示例产品</div>
+        <p class="pn">「Volo」磁吸充电宝</p>
+        <p class="pd">3C 配件品牌，主投 TikTok 与视频号。团队发现一条竞品的「三秒痛点 + 拆解演示 + 反转」结构连续跑量三个月。<br><b>要做的片子</b>：用同一结构做三条，分别对应通勤、出差、露营三个场景。每条前 3 秒必须是「手机没电」的具象画面，第 8 秒出现产品吸附动作，结尾同一句 CTA。</p>
+      </div>
+
+      <div class="io">
+        <div class="box"><div class="k">输入</div><div class="v">一条参考视频</div></div>
+        <div class="ar">→</div>
+        <div class="box"><div class="k">产出</div><div class="v">同节奏、换内容的新片</div></div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <h4 class="lbl">完成判据</h4>
+          <ul class="chk">
+            <li>镜头时长分布相似度：每个切点的相对位置偏差 <b>≤ 10%</b></li>
+            <li>能量曲线相关性 <b>≥ 0.8</b>（每镜光流 + 音量的组合曲线）</li>
+            <li>内容差异度：关键帧感知哈希距离 <b>&gt; 阈值</b>（证明不是换皮）</li>
+            <li>前 3 秒钩子类型与参考片 <b>一致</b>（按标注规则判定）</li>
+            <li>CTA 出现位置偏差 <b>≤ 0.5s</b></li>
+          </ul>
+        </div>
+        <div>
+          <div class="why">
+            <div class="k">为什么能跑通</div>
+            <p>Hypit 的核心主张正在这里：<b>保留「哪个词触发哪个画面」的关系，换掉词和素材</b>。节奏结构是可量化的，所以可验收；而内容差异度有哈希距离兜底，保证不是简单换皮。</p>
+          </div>
+          <div class="edge">
+            <div class="k">边界</div>
+            <p>参考片如果依赖真人表演的微表情，结构能抄但味道抄不到。需要人工标注钩子类型，这一步暂时没法全自动。跨品类套结构会显得生硬。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ---- CASE 4 ---- -->
+  <article class="case" id="c4">
+    <div class="top">
+      <div class="hdr">
+        <div class="no" style="background:var(--green)">4</div>
+        <h3>一稿多语言</h3>
+        <span class="tag lo">难度 低</span>
+        <span class="tag det">完全确定性</span>
+      </div>
+      <p class="sub">一条做好的成片，产出十几到二十个语言版本。纯替换问题，没有创作成分，是本清单里投入产出比最高的一类。</p>
+    </div>
+    <div class="body">
+      <div class="ex">
+        <div class="lbl">示例产品</div>
+        <p class="pn">「掌勺」多功能料理机（出海）</p>
+        <p class="pd">小厨电品牌，国内版片子已定稿，准备铺东南亚与中东市场。<br><b>要做的片子</b>：同一条 40 秒功能片，先做 4 个语言版本：越南语、泰语、印尼语、阿拉伯语。要求画面完全一致，只换配音与烧录字幕；产品名「掌勺」在部分地区改为拼音 CHOPO。</p>
+      </div>
+
+      <div class="io">
+        <div class="box"><div class="k">输入</div><div class="v">成片 + 目标语言列表</div></div>
+        <div class="ar">→</div>
+        <div class="box"><div class="k">产出</div><div class="v">10–20 个语言版本</div></div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <h4 class="lbl">完成判据</h4>
+          <ul class="chk">
+            <li>字幕行数与原片 <b>一致</b>，无漏译、无空行</li>
+            <li>配音时长与画面对齐误差 <b>≤ 0.5s</b></li>
+            <li>屏幕文字全部替换，OCR 检出 <b>无原语言残留</b></li>
+            <li>每个版本技术门 <b>全过</b>（时长、画幅、音轨）</li>
+            <li>品牌名按地区对照表替换，<b>零错漏</b></li>
+          </ul>
+        </div>
+        <div>
+          <div class="why">
+            <div class="k">为什么能跑通</div>
+            <p>这是<b>纯确定性的替换问题</b>，没有创作成分，所以每一个判据都能精确判定。商业价值也最直接：传统一条素材做二十个市场是二十倍成本，这里是叠加成本。</p>
+          </div>
+          <div class="edge">
+            <div class="k">边界</div>
+            <p>阿拉伯语、希伯来语需要从右到左排版，字幕位置要重排。有些市场的合规要求不同（如医疗、金融类宣称），需要人审。文化语境差异大时，直译会很别扭，这属于翻译质量问题而非工程问题。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ---- CASE 5 ---- -->
+  <article class="case" id="c5">
+    <div class="top">
+      <div class="hdr">
+        <div class="no" style="background:var(--green)">5</div>
+        <h3>数据动效片</h3>
+        <span class="tag lo">难度 低</span>
+        <span class="tag det">完全确定性</span>
+      </div>
+      <p class="sub">一份数据加一句结论，产出一段带图表动画的说明片。数字是代码渲染的，不是生成的，不可能错。</p>
+    </div>
+    <div class="body">
+      <div class="ex">
+        <div class="lbl">示例产品</div>
+        <p class="pn">「账房」财务 SaaS · 年度报告片</p>
+        <p class="pd">面向中小企业的记账 SaaS，要发一份年度行业报告并配一条传播片。<br><b>要做的片子</b>：35 秒，用三组数据讲「中小企业平均应收账期从 68 天延长到 91 天」。要求每个数字在屏幕上停留 ≥1.5 秒，最终落定一个可视化对比图。</p>
+      </div>
+
+      <div class="io">
+        <div class="box"><div class="k">输入</div><div class="v">JSON / 表格 + 一句结论</div></div>
+        <div class="ar">→</div>
+        <div class="box"><div class="k">产出</div><div class="v">20–40 秒数据动效视频</div></div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <h4 class="lbl">完成判据</h4>
+          <ul class="chk">
+            <li>最终帧数值与输入数据 <b>逐位相等</b>（OCR + 数值比对）</li>
+            <li>图表类型与数据关系匹配（占比用饼/堆叠，趋势用折线）</li>
+            <li>所有动效有起止状态，<b>无悬空动画</b></li>
+            <li>每个数字停留时长 <b>≥ 1.5s</b></li>
+            <li>零生成模型调用（纯代码路径）</li>
+          </ul>
+        </div>
+        <div>
+          <div class="why">
+            <div class="k">为什么能跑通</div>
+            <p>数字由代码渲染，<b>不可能出错</b>。整个 Case 零生成依赖，是唯一一个理论上 100% 可复现的品类。适合作为框架的第一条打通链路。</p>
+          </div>
+          <div class="edge">
+            <div class="k">边界</div>
+            <p>数据本身如果有问题，片子会精确地展示错误。观感偏理性，不适合情绪类营销。超过五个图表后注意力会散。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ---- CASE 6 ---- -->
+  <article class="case" id="c6">
+    <div class="top">
+      <div class="hdr">
+        <div class="no" style="background:var(--amber)">6</div>
+        <h3>产品功能演示</h3>
+        <span class="tag mid">难度 中</span>
+        <span class="tag det">确定性</span>
+      </div>
+      <p class="sub">从真实页面截图出发，用虚拟运镜做功能演示。质量上限最高的一类，因为底图是真实像素。</p>
+    </div>
+    <div class="body">
+      <div class="ex">
+        <div class="lbl">示例产品 · 五个不同形态</div>
+        <p class="pn">「账房」财务 SaaS · 桌面后台</p>
+        <p class="pd" style="margin-bottom:16px">面向中小企业的记账 SaaS，要一条用于官网首屏与销售提案的片子。<br><b>要做的片子</b>：50 秒，展示四个核心功能：自动识别发票、一键生成凭证、应收账龄看板、多主体合并报表。每个功能从真实页面截图出发展示，不手搓 UI。</p>
+
+        <p class="pn">「墨记」笔记 App · 移动端</p>
+        <p class="pd" style="margin-bottom:16px">一款面向写作者的本地笔记应用，主打「离线、纯文本、秒开」。需要一条应用商店预览片。<br><b>要做的片子</b>：30 秒竖版，模拟手指操作串起的三个动作：新建、双链跳转、全局搜索。界面全部来自真机截图，手势用层叠位移与遮罩模拟，不做真人手。</p>
+
+        <p class="pn">「砺刃」桌面修图工具 · 本地客户端</p>
+        <p class="pd" style="margin-bottom:16px">一款面向摄影师的批量修图软件，核心卖点是「一次调色应用到两千张」。需要一条发布片。<br><b>要做的片子</b>：40 秒，从单张照片的调色面板推近开始，镜头拉远露出批量队列，最后落定处理速度数字。界面来自真实客户端截图，数字用代码渲染。</p>
+
+        <p class="pn">「云枢」IoT 设备管理台 · 大屏看板</p>
+        <p class="pd" style="margin-bottom:16px">面向工厂的能耗监控平台，卖点是「异常自动定位到具体产线」。需要一条展会循环播放片。<br><b>要做的片子</b>：35 秒横版，从全国地图总览逐级下钻到单台设备告警。整段是一次连续的相机推进，用同一张超长截图做 2.5D 运镜。</p>
+
+        <p class="pn">「栈桥」开发者 API 平台 · 文档站</p>
+        <p class="pd">面向开发者的数据接口平台，卖点是「三行代码接入」。需要一条嵌在落地页的视频。<br><b>要做的片子</b>：25 秒，左侧代码逐行打字出现，右侧返回结果实时弹出，最后并排展示调用量增长曲线。代码和数字都是真实渲染的文本，不经过图片生成。</p>
+      </div>
+
+      <div class="io">
+        <div class="box"><div class="k">输入</div><div class="v">前端项目 / 网址 / 桌面或移动端截图</div></div>
+        <div class="ar">→</div>
+        <div class="box"><div class="k">产出</div><div class="v">30–60 秒功能演示片（每个产品 1 条）</div></div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <h4 class="lbl">完成判据</h4>
+          <ul class="chk">
+            <li>截图来自真实页面（与源站 DOM 比对，不是手搓）</li>
+            <li>文字锐度：放大帧的边缘梯度 <b>超过阈值</b>（2 倍栅格化）</li>
+            <li>每个必须展示的功能都有对应镜头（对 brief 逐项核对）</li>
+            <li>无敏感数据（脱敏规则表全过）</li>
+            <li>字幕有效字高 <b>≥ 56px</b>（1080p）</li>
+          </ul>
+        </div>
+        <div>
+          <div class="why">
+            <div class="k">为什么能跑通</div>
+            <p>video-shotcraft 的整套方法就是为这个建的，124 张镜头卡里一半是 UI 类。底图是真实截图，所以<b>主体一致性天然 100%</b>，问题只剩运镜和排版。</p>
+          </div>
+          <div class="edge">
+            <div class="k">边界</div>
+            <p>客户数据敏感，脱敏不彻底会出事。页面状态需要预先准备好（登录态、示例数据）。工时比前几个重得多，不适合走量。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ---- CASE 7 ---- -->
+  <article class="case" id="c7">
+    <div class="top">
+      <div class="hdr">
+        <div class="no" style="background:var(--green)">7</div>
+        <h3>长内容切片</h3>
+        <span class="tag lo">难度 低</span>
+        <span class="tag det">确定性最高</span>
+      </div>
+      <p class="sub">一小时播客切成十几条短视频。素材已经是现成的，框架只负责选择和切分，不确定性最小。</p>
+    </div>
+    <div class="body">
+      <div class="ex">
+        <div class="lbl">示例产品</div>
+        <p class="pn">「开店笔记」播客 · 切片矩阵</p>
+        <p class="pd">一个面向小餐饮创业者的播客，每期 60–90 分钟。运营团队需要每期产出短视频，投放到视频号、抖音、小红书、B 站。<br><b>要做的片子</b>：从一期「为什么你的店活不过 18 个月」里切出 4 条 30 秒片段，每条有独立钩子和完整语义，配字幕与简单 B-roll。</p>
+      </div>
+
+      <div class="io">
+        <div class="box"><div class="k">输入</div><div class="v">1 小时播客 / 直播</div></div>
+        <div class="ar">→</div>
+        <div class="box"><div class="k">产出</div><div class="v">10–20 条 30 秒片段</div></div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <h4 class="lbl">完成判据</h4>
+          <ul class="chk">
+            <li>每片有完整语义（起止落在句界，非句中切断）</li>
+            <li>字幕准确率 <b>≥ 98%</b>（ASR + 人工抽检 5%）</li>
+            <li>画面有变化：固定机位静坐 <b>不超过 8 秒</b>，超则加 B-roll 或缩放</li>
+            <li>每条独立可懂（无指代前文的代词）</li>
+            <li>4 条覆盖原片 <b>≥ 30%</b> 的有效内容，不重复</li>
+          </ul>
+        </div>
+        <div>
+          <div class="why">
+            <div class="k">为什么能跑通</div>
+            <p><b>确定性最高的一类</b>：素材已经存在，框架只做选择与切分，不生成任何画面。所有判据都能在原始素材和成片上直接量出来。</p>
+          </div>
+          <div class="edge">
+            <div class="k">边界</div>
+            <p>「哪段值得切」是主观判断，需要给模型明确的选题规则（痛点密度、金句密度、数据密度）。多人对话的说话人归属容易错。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ---- CASE 8 ---- -->
+  <article class="case" id="c8">
+    <div class="top">
+      <div class="hdr">
+        <div class="no" style="background:var(--purple)">8</div>
+        <h3>广告变体工厂</h3>
+        <span class="tag mid">难度 中</span>
+        <span class="tag hi">判据在框架外</span>
+      </div>
+      <p class="sub">一条母版派生几十个变体，每个变体带一个明确的投放假设。它是本清单里唯一一个「真正的验收在投放数据里」的 Case。</p>
+    </div>
+    <div class="body">
+      <div class="ex">
+        <div class="lbl">示例产品</div>
+        <p class="pn">「雾屿」香薰机的投放矩阵</p>
+        <p class="pd">接 Case 1 的同一款产品，进入投放阶段。团队已有的母版是一条 15 秒展示片。<br><b>要做的片子</b>：先做 4 条变体验证假设。两个维度交叉：开头钩子（静音痛点 / 颜值展示）× CTA（立即购买 / 领券），其余要素保持完全一致。验证有效后再按同一框架扩到 30 条以上。</p>
+      </div>
+
+      <div class="io">
+        <div class="box"><div class="k">输入</div><div class="v">一条母版</div></div>
+        <div class="ar">→</div>
+        <div class="box"><div class="k">产出</div><div class="v">4 条带假设标签的变体<br><span style="color:var(--gray2);font-size:12px">验证后再扩量</span></div></div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <h4 class="lbl">完成判据</h4>
+          <ul class="chk">
+            <li>每个变体过<b>前三道门</b>（技术 / 感知 / 品牌）</li>
+            <li>变体间感知哈希距离 <b>&gt; 阈值</b>（证明真的不同，不是改标点）</li>
+            <li>每个变体带一个明确的假设标签（如 H01_痛点开头）</li>
+            <li>同组变体除受控维度外，<b>其余要素完全一致</b></li>
+            <li>投放后 <b>14 天</b>内回收完整数据，无缺失</li>
+          </ul>
+        </div>
+        <div>
+          <div class="why">
+            <div class="k">为什么这个最重要</div>
+            <p>它是唯一一个<b>真正的验收在框架外</b>的 Case——片子做得再好，投放跑不动就是失败。所以它必须配一个数据回流机制，把「哪个变体赢了」变成下一轮生产的先验。这也是整个 AI 营销的价值中枢。</p>
+          </div>
+          <div class="edge">
+            <div class="k">边界</div>
+            <p>需要投放平台接口与归因链路，工程量在框架之外。样本量不足时结论不可信（每个变体至少要跑够曝光）。同组要素控制不严会污染结论。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<hr class="sep">
+
+<!-- ================= PRIORITY ================= -->
+<section id="priority">
+  <h2 class="sec"><span class="num">04</span>投产顺序</h2>
+  <p class="secdesc">按「跑通概率 × 商业价值」排序。前三个是纯确定性路径，应该先打通，用来验证框架的骨架。</p>
+
+  <table>
+    <thead>
+      <tr><th style="width:8%">顺序</th><th style="width:24%">Case</th><th style="width:14%">确定性</th><th style="width:54%">为什么排在这个位置</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>1</strong></td><td>多语言</td><td><span class="tag det">完全</span></td><td>纯替换，商业价值直接，最适合作为框架第一条端到端链路</td></tr>
+      <tr><td><strong>2</strong></td><td>数据动效</td><td><span class="tag det">完全</span></td><td>零生成依赖，不可能错，用来验证渲染与验收管线</td></tr>
+      <tr><td><strong>3</strong></td><td>长内容切片</td><td><span class="tag det">最高</span></td><td>素材现成，只做选择与切分，验证选段与对齐能力</td></tr>
+      <tr><td><strong>4</strong></td><td>商品图</td><td><span class="tag mid">半</span></td><td>最稳的生成类，无人物无文字，验证相似度兜底</td></tr>
+      <tr><td><strong>5</strong></td><td>口播</td><td><span class="tag det">近</span></td><td>链条成熟，验证 TTS 与字幕同步</td></tr>
+      <tr><td><strong>6</strong></td><td>变体工厂</td><td><span class="tag mid">半</span></td><td>价值最大，但需要投放接口，放在有数据能力之后</td></tr>
+      <tr><td><strong>7</strong></td><td>功能演示</td><td><span class="tag det">确定</span></td><td>质量上限高但工时重，适合做标杆项目而非走量</td></tr>
+      <tr><td><strong>8</strong></td><td>结构克隆</td><td><span class="tag mid">半</span></td><td>需要参考片拆解能力，组件最复杂，最后做</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ================= BREAKTHROUGH ================= -->
+<section id="breakthrough" style="margin-top:60px">
+  <h2 class="sec"><span class="num">05</span>真正能突破的五个地方</h2>
+  <p class="secdesc">不是「生成得更好看」——那是模型厂商的事。突破点在于把单条制作变成一门可规模化的生意。</p>
+
+  <div class="bks">
+    <div class="bk">
+      <div class="n">01</div>
+      <h4>从做一条片，到跑一个库</h4>
+      <p>传统制作里，第 2 条到第 50 条的成本几乎线性。AI 的边际成本趋近于零。<b>真正的产品不是更好的单条，而是能稳定产出 50 条可用变体的机器。</b>这个转换传统制作公司做不了，因为他们的人均产能是固定的。</p>
+    </div>
+    <div class="bk">
+      <div class="n">02</div>
+      <h4>结果数据回流成生成先验</h4>
+      <p>这是唯一不可被模型厂商复制的壁垒。别人也能接同样的模型，但<b>他们不知道你的客户里「3 秒内出现产品」比「3 秒内出现人」转化高多少</b>。这个知识只能从投放数据里长出来。</p>
+    </div>
+    <div class="bk">
+      <div class="n">03</div>
+      <h4>素材寿命管理</h4>
+      <p>一条素材投放两周后就疲劳，现在靠人盯。如果能自动检测衰减曲线并提前生成替代变体，这是<b>运营效率的真实提升</b>，不是噱头。</p>
+    </div>
+    <div class="bk">
+      <div class="n">04</div>
+      <h4>多市场并行</h4>
+      <p>不是翻译，是<b>同一条创意骨架在二十个文化语境里同时成立</b>。传统公司成本是 20 倍，AI 是 1.2 倍。而且它天然可判定——语言对不对一眼能看出来。</p>
+    </div>
+    <div class="bk" style="grid-column:1/-1">
+      <div class="n">05</div>
+      <h4>创意与投放一体化</h4>
+      <p>让生成时就带上投放假设，产出物自带 A/B 分组和归因标签。<b>把创意和投放从两个部门变成一个闭环。</b>这是唯一一条能让「做好片子」和「生意变好」直接挂钩的路径，也是这套 Case 库最终要落到的位置。</p>
+    </div>
+  </div>
+
+  <div class="rule" style="margin-top:34px;border-left-color:var(--ink)">
+    <div class="t">一句话总结</div>
+    <p class="q" style="font-size:17px">能跑通的 Case，都是「完成条件可以被机器判定」的 Case。</p>
+    <p class="s">上面八个里，多语言、数据动效、长内容切片完全确定性；商品图、口播、变体工厂有概率成分但可量化验收；功能演示、结构克隆需要更强的能力。突破点不在于把片子做得更好看，而在于<b>把「一条片」变成「一个能自我迭代的变体库 + 数据闭环」</b>。</p>
+  </div>
+</section>
+
+<footer>
+  AI 营销视频 · 可交付 Case 库　·　整理于 2026-10-31<br>
+  判据参考：video-shotcraft 的审美准则与终审清单、Hypit 的评审归属表、OpenMontage 的 CHAI 原则与四道闸门、MoneyPrinterTurbo 的 TTS 时间戳链路，以及自有平台的生成与超分经验。
+</footer>
+
+</main>
+</div>
+
+<script>
+  // 滚动高亮当前章节：取最后一个已越过视口上部的章节
+  const links = [...document.querySelectorAll('aside nav a')];
+  const targets = links.map(a => ({a, el: document.querySelector(a.getAttribute('href'))}))
+                       .filter(t => t.el);
+
+  function sync() {
+    const line = window.scrollY + 140;
+    let current = targets[0];
+    for (const t of targets) {
+      if (t.el.offsetTop <= line) current = t;
+    }
+    links.forEach(l => l.classList.toggle('on', l === current.a));
+  }
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(() => { sync(); ticking = false; }); }
+  }, {passive: true});
+  window.addEventListener('load', sync);
+  sync();
+</script>
+</body>
+</html>
